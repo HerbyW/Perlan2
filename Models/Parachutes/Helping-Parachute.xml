@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  
+  <!-- Brake Parachute -->
+  
+  <path>Parachute.ac</path>
+  
+  
+  
+  <animation>
+    <type>select</type>
+    <object-name>DC_Cords</object-name>
+    <object-name>DC_Chute</object-name>
+    <object-name>Rope</object-name>
+    <object-name>MC_Base</object-name>
+    <condition>            
+      <greater-than>
+	<property>sim/multiplay/generic/float[4]</property>
+	<value>0.01</value>
+      </greater-than>                    
+    </condition>
+  </animation>
+  
+  <animation>
+		<type>spin</type>
+		 <object-name>DC_Cords</object-name>
+                 <object-name>DC_Chute</object-name>
+		<property>sim/multiplay/generic/float[10]</property>
+		<condition>            
+      <greater-than>
+	<property>sim/multiplay/generic/float[4]</property>
+	<value>0.90</value>
+      </greater-than>                    
+    </condition>
+		<factor>0.22</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-2.30</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+  
+  <animation>
+    <type>scale</type>
+    <object-name>DC_Cords</object-name>
+    <object-name>DC_Chute</object-name>
+    <object-name>Rope</object-name>
+    <property>sim/multiplay/generic/float[4]</property>
+    <center>
+      <x-m>6.537</x-m>
+      <y-m> 0   </y-m>
+      <z-m> 0.755</z-m>
+    </center>
+    <x-min>0.02</x-min>
+    <y-min>0.02</y-min>
+    <z-min>0.02</z-min>
+    <x-factor>1</x-factor>
+    <y-factor>1</y-factor>
+    <z-factor>1</z-factor>               
+  </animation>
+  
+  
+  
+  </PropertyList>
+  

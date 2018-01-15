@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<PropertyList>
+    
+    <!--COCKPIT-->
+    <!--FRONT INSTRUMENTS-->
+    
+    <model>
+        <name>wind</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/windcompass/windcompass.xml</path>
+        <offsets>
+            <x-m>-3.33317</x-m>
+            <y-m>-0.0</y-m>
+            <z-m>0.60503</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+    
+    <!--ASI-->
+    <model>
+        <name>asi</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/winter-asi-ask21-kph/80mm_asi_6fms4.xml</path>
+        <offsets>
+            <x-m>-3.30441</x-m>
+            <y-m>-0.04882</y-m>
+            <z-m>0.69</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+    
+    <!--Altimeter-->
+    <model>
+        <name>alt</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/alti-4110/winter-4110.xml</path>
+        <offsets>
+            <x-m>-3.33359</x-m>
+            <y-m>-0.09974</y-m>
+            <z-m> 0.59919</z-m>
+        </offsets>
+    </model>
+    
+    <!--Variometer-->
+    
+    <model>
+        <name>vario-1</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/vario-knots/winter-vario-5stv5-knots.xml</path>
+        <offsets>
+            <x-m>-3.3351</x-m>
+            <y-m>0.09945</y-m>
+            <z-m>0.60027</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+   
+
+    <!-- Electric Variometer
+    <model>
+        <name>vario2</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/ilec-sc7/ilec-sc7.xml</path>
+        <offsets>
+            <x-m>-3.321</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.67</z-m>
+            <pitch-deg>-2</pitch-deg>
+        </offsets>
+    </model> -->
+
+    <!-- Accelerometer -->
+    <model>
+        <name>gmeter</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/GMeter/GMeter.xml</path>
+        <offsets>
+            <x-m>-3.32003</x-m>
+            <y-m>0.04568</y-m>
+            <z-m>0.69</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+   
+    <!-- COM Radio -->
+    <model>
+        <name>com</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/ar-3201/ar-3201.xml</path>
+        <offsets>
+            <x-m>-3.33283</x-m>
+            <y-m>-0.23679</y-m>
+            <z-m>0.53316</z-m>
+            <pitch-deg>-3.3</pitch-deg>
+        </offsets>
+    </model>
+   <!--  <model>
+        <name>radio_screws</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/GMeter/57mm_screws.xml</path>
+        <offsets>
+            <x-m>-3.33183</x-m>
+            <y-m>-0.23679</y-m>
+            <z-m>0.53316</z-m>
+            <pitch-deg>-3.3</pitch-deg>
+        </offsets>
+    </model> -->
+    <!-- Compass -->
+    <model>
+        <name>compass</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/57mm_compass/57mm_compass.xml</path>
+        <offsets>
+            <x-m>-3.32342</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.78</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    <!--57mm turnslip-->
+    <model>
+        <name>turnslip</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/57mm_turnslip/57mm_turnslip.xml</path>
+        <offsets>
+            <x-m>-3.32931</x-m>
+            <y-m>0</y-m>
+            <z-m>0.51714</z-m>
+            <pitch-deg>-8.63</pitch-deg>
+        </offsets>
+    </model>
+    <!-- Master switch -->
+    <model>
+        <name>master_switch</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/switches/masterswitch.xml</path>
+        <offsets>
+            <x-m>-3.333</x-m>
+            <y-m>-0.173</y-m>
+            <z-m>0.585</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    <model>
+        <name>turnslip_switch</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/switches/turnslipswitch.xml</path>
+        <offsets>
+            <x-m>-3.3325</x-m>
+            <y-m>-0.153</y-m>
+            <z-m>0.585</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    <model>
+        <name>parachute_switch</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/switches/parachute.xml</path>
+        <offsets>
+            <x-m>-3.3325</x-m>
+            <y-m>-0.173</y-m>
+            <z-m>0.625</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    <model>
+        <name>parachute_redlamp</name>
+        <path>Aircraft/Perlan2/Models/Interior/Panel/Instruments/switches/parachute-red.xml</path>
+        <offsets>
+            <x-m>-3.353</x-m>
+            <y-m>-0.153</y-m>
+            <z-m>0.625</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+
+   
+</PropertyList>

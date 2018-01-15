@@ -1,0 +1,126 @@
+<PropertyList>
+    <title>Perlan2</title>
+    <key>
+        <name>Ctrl-w</name>
+        <desc>Place winch in front of aircraft</desc>
+    </key>
+    <key>
+        <name>W</name>
+        <desc>Increase winch speed</desc>
+    </key>
+    <key>
+        <name>w</name>
+        <desc>Decrease winch speed</desc>
+    </key>
+    <key>
+        <name>Ctrl-o</name>
+        <desc>Find aircraft for aerotow</desc>
+    </key>
+    <key>
+        <name>o</name>
+        <desc>Open aerotow and winch hooks. This releases the cable if one is attached.</desc>
+    </key>
+    <key>
+        <name>k/j</name>
+        <desc>speedbrakes out/in</desc>
+    </key>
+    <key>
+        <name>B , .</name>
+        <desc>Parking Brake, brakes</desc>
+    </key>
+    <key>
+        <name>F2</name>
+        <desc>Drouge Parachute</desc>
+    </key>
+    <key>
+        <name>&lt;</name>
+        <desc>Change right, left and center pilot view</desc>
+    </key>
+    
+    <text>
+      
+Perlan2 Stratospheric Glider by Herbert Wagner 09/2017-2018
+
+    === General Help ===
+    
+     - You can take off using a winch or use another aircraft as an aerotow.
+     - The winch / aerotow cable can be released with the "o" key or using button 1 of the (first) joystick.
+
+    === Winch Takeoff Procedure ===
+
+     - Retract speed brake
+     - Set trim just forward of the middle position.
+     - Press 'Ctrl-w' to place winch.
+     - Press 'Shift-w' to start winch and take up cable slack.
+     - When the glider starts moving, press 'Shift-w' several times to accelerate the winch
+       (up to full speed).
+     - Keep the wings level with the aileron and the glider going in a straight line with the rudder.
+       Keep elevator centered, the glider will lift off and rotate by automatically as long as the trim is set
+       correctly.
+       Once the established in the climb, you can pull back on the stick slightly to increase climb rate.
+     - Control the winch speed throughout the entire launch. 'Shift-w' makes the winch run faster,
+       'w' makes it run slower.
+       Try to maintain constant force on the cable, you will need to gradually slow down the winch
+       as glider climbs.
+     - When the glider reaches the top of the launch, close winch throttle to 5% and press 'o'
+       to release the cable.
+
+    === Aerotow Takeoff Procedure ===
+
+      - Set maximum speed brake
+      - Place another aerotow aircraft in front of your glider (multi-player).
+      - Press 'Ctrl-o' to hook to the aerotow.
+      - Ask the other aircraft to take off :).
+      - Keep wings level and follow the aircraft until after takeoff.
+      - The glider should lift off before the tug, stay close to the ground until the tug starts climbing.
+      - Slowly reduce the speedbrake
+      - When at appropriate alitude, press 'o' to release the cable.
+
+    === Ground handling ===
+
+    This aircraft has some features to help with ground handling:
+
+      - Enable wing holder: the aircraft gets levelled around the x-axis as if
+        someone was holding your wing.
+      - Enable ground handling: controls are modified to help move the glider around
+        on the ground:
+        1. All rudder inputs will make the glider turn, as if someone was pulling on the wingtip.
+        2. All throttle inputs cause the glider to taxi, as if someone (or a car) was pulling or pushing it.
+      - When exceeding a given speed of 15 kts assisting gears will be reset to off (e.g. on takeoff), ground handling will become inactive at 20kts.
+
+    When there is somebody with a follow-me around, you can connect to it by pressing Ctrl+o
+    (release: Ctrl+shift+o) so he can carry you around the airport
+    or even tow you into the air! (also check the Aerotow Settings therefore).
+
+    === Descending from high altitide ===
+    
+    Use the drog parachute (F2) or the switch in the panel to reduce speed when descending.
+    
+    === Realistic weather settings ===
+    
+    For realistic Weather go to Weather Conditions:
+    Fair weather -- Detailed Weather -- Advanced Settings
+    Tile Selection Mode: realistic
+    Terrain Effects and Terrain Presampling: on
+    Wind Model: aloft interpolated
+
+    Check your wind configuration:
+    FL0 260 12
+    FL50 262 16
+    FL100 264 20
+    FL180 265 28
+    FL240 269 39
+    FL300 273 47
+    FL340 278 54
+    FL390 271 59
+    FL450 275 68
+
+    The towing will start a Cessna 177 with sound at the apron,
+    it then will go to the startpoint for towing on the east side of the runway.
+    Use the speedbrakes to compensate for the elastic rope at start-up.
+    
+    === Scenery features ===
+    
+    There are two sceneries implemented, go to the wavelift folder and follow the instructions in the readme.txt file.
+    </text>
+</PropertyList>

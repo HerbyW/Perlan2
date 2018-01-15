@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<!--  -->
+<PropertyList>
+    <path>perlanII-19.ac</path>
+    
+    <sound>
+            <path>Aircraft/Perlan2/Sounds/Perlan2-sound.xml</path>
+        </sound>
+	
+	<!--COCKPIT -->
+    <model>
+        <path>Aircraft/Perlan2/Models/Interior/interior.xml</path>
+    </model>
+    
+    <!--WING BENDING
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.L1</object-name>
+        <object-name>wing.L2</object-name>
+        <object-name>wing.L3</object-name>
+        <object-name>wing.L4</object-name>
+        <object-name>aileron-l</object-name>
+        <object-name>speedbrake-l</object-name>
+        
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>-0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m> 0.00</x-m>
+            <y-m>-0.29524</y-m>
+            <z-m>0.76528</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.L2</object-name>
+        <object-name>wing.L3</object-name>
+        <object-name>wing.L4</object-name>
+        <object-name>aileron-l</object-name>
+        <object-name>speedbrake-l</object-name>
+        
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>-0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m> 0.00</x-m>
+            <y-m>-2.33212</y-m>
+            <z-m>0.90744</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.L3</object-name>
+        <object-name>wing.L4</object-name>
+        <object-name>aileron-l</object-name>
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>-0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>  0.00</x-m>
+            <y-m>-4.32656</y-m>
+            <z-m> 1.03302</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.L4</object-name>
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>-0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>  0.00</x-m>
+            <y-m>-7.93317</y-m>
+            <z-m>1.29763</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.R1</object-name>
+        <object-name>wing.R2</object-name>
+        <object-name>wing.R3</object-name>
+        <object-name>wing.R4</object-name>
+        <object-name>aileron-r</object-name>
+        <object-name>speedbrake-r</object-name>
+       
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m> 0.00</x-m>
+            <y-m>0.29524</y-m>
+            <z-m>0.76528</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.R2</object-name>
+        <object-name>wing.R3</object-name>
+        <object-name>wing.R4</object-name>
+        <object-name>aileron-r</object-name>
+        <object-name>speedbrake-r</object-name>
+        
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m> 0.00</x-m>
+            <y-m>2.33212</y-m>
+            <z-m>0.90744</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.R3</object-name>
+        <object-name>wing.R4</object-name>
+        <object-name>aileron-r</object-name>
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>  0.00</x-m>
+            <y-m>4.32656</y-m>
+            <z-m> 1.03302</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>wing.R4</object-name>
+        <property>sim/multiplay/generic/float[9]</property>
+        <factor>0.5</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>  0.00</x-m>
+            <y-m>7.93317</y-m>
+            <z-m>1.29763</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>-->
+    
+    <!--FLIGHT CONTROL SURFACES-->
+    <animation>
+        <type>rotate</type>
+        <object-name>aileron-l</object-name>
+        <property>surface-positions/left-aileron-pos-norm</property>
+        <factor>-24</factor>
+        <axis>
+            <x1-m>0.39646</x1-m>
+            <y1-m>-4.24197</y1-m>
+            <z1-m>0.94206</z1-m>
+            <x2-m>0.39646</x2-m>
+            <y2-m>-11.39497</y2-m>
+            <z2-m>1.10944</z2-m>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>aileron-r</object-name>
+        <property>surface-positions/right-aileron-pos-norm</property>
+        <factor>24</factor>
+        <axis>
+            <x1-m>0.39646</x1-m>
+            <y1-m>4.24197</y1-m>
+            <z1-m>0.94206</z1-m>
+            <x2-m>0.39646</x2-m>
+            <y2-m>11.39497</y2-m>
+            <z2-m>1.10944</z2-m>
+        </axis>
+    </animation>
+    
+    <!--airbrakes-->
+    <animation>
+        <type>translate</type>
+        <object-name>speedbrake-l</object-name>
+        
+        <property>surface-positions/speedbrake-pos-norm</property>
+        <factor>0.12</factor>
+        <center>
+            <x-m>-1.17459</x-m>
+            <y-m>-3.3164</y-m>
+            <z-m>0.92774</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>translate</type>
+        <object-name>speedbrake-r</object-name>
+        
+        <property>surface-positions/speedbrake-pos-norm</property>
+        <factor>0.12</factor>
+        <center>
+            <x-m>-1.17459</x-m>
+            <y-m>3.3164</y-m>
+            <z-m>0.92774</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+    
+    
+    <!--Rudder  -->
+    <animation>
+        <type>rotate</type>
+        <object-name>rudder</object-name>
+	<object-name>rudder-blue</object-name>
+	<object-name>rudder-red</object-name>
+	<object-name>rudder-star</object-name>
+	<object-name>rudder-grey</object-name>
+        <property>surface-positions/rudder-pos-norm</property>
+        <factor>-6</factor>
+        <axis>
+            <x1-m>6.09244</x1-m>
+            <y1-m>0.0</y1-m>
+            <z1-m>2.14261</z1-m>
+            <x2-m>5.73801</x2-m>
+            <y2-m>0.0</y2-m>
+            <z2-m>0.85505</z2-m>
+        </axis>
+    </animation>
+    
+    
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>elevator-l</object-name>
+        <property>surface-positions/elevator-pos-norm</property>
+        <factor>-6</factor>
+        <axis>
+            <x1-m>5.745</x1-m>
+            <y1-m>-0.03915</y1-m>
+            <z1-m>0.988</z1-m>
+            <x2-m>5.745</x2-m>
+            <y2-m>-1.270</y2-m>
+            <z2-m>0.988</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>elevator-r</object-name>
+        <property>surface-positions/elevator-pos-norm</property>
+        <factor>6</factor>
+        <axis>
+            <x1-m>5.745</x1-m>
+            <y1-m>0.03915</y1-m>
+            <z1-m>0.988</z1-m>
+            <x2-m>5.745</x2-m>
+            <y2-m>1.270</y2-m>
+            <z2-m>0.988</z2-m>
+        </axis>
+    </animation>
+    
+    <!--helping wheels -->
+    <model>
+        <path>Aircraft/Perlan2/Models/wheels.ac</path>
+    </model>
+    
+    <animation>
+        <type>select</type>
+        <object-name>halterung</object-name>
+        <object-name>reifen</object-name>
+	<object-name>speichen</object-name>
+	<object-name>halterung.001</object-name>
+        <object-name>reifen.001</object-name>
+	<object-name>speichen.001</object-name>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/float[7]</property>
+                <value>1</value>
+            </equals>
+        </condition>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+        <object-name>reifen</object-name>
+	<object-name>speichen</object-name>
+    <property>sim/multiplay/generic/float[5]</property>
+    <factor> -20 </factor>
+    <center>
+      <x-m> -0.001112 </x-m>
+      <y-m>   -7.9 </y-m>
+      <z-m>  0.311 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+        <object-name>reifen.001</object-name>
+	<object-name>speichen.001</object-name>
+    <property>sim/multiplay/generic/float[5]</property>
+    <factor> -20 </factor>
+    <center>
+      <x-m> -0.001112 </x-m>
+      <y-m>   7.9 </y-m>
+      <z-m>  0.311 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+    
+    
+    <!--SHADOW
+    <model>
+        <path>Aircraft/Perlan2/Models/Effects/shadow.xml</path>
+    </model>-->
+    
+    <!--IMMAT
+    <model>
+        <path>Immat/immat.xml</path>
+    </model>-->
+    
+    <!--SMOKE for aerobatics-->
+    
+    <model>
+        <path>Effects/Smoke/smoke-blue.xml</path>
+        <offsets>
+            <x-m>0.42</x-m>
+            <y-m>12.73</y-m>
+            <z-m>1.15</z-m>
+        </offsets>
+    </model>
+    <model>
+        <path>Effects/Smoke/smoke-white.xml</path>
+        <offsets>
+            <x-m>0.42</x-m>
+            <y-m>-12.73</y-m>
+            <z-m>1.15</z-m>
+        </offsets>
+    </model>
+    
+    <!--GEAR-->
+    <!--Compression-->
+  
+  <animation>
+        <type>translate</type>
+        <object-name>wheelM</object-name>
+	
+        <property>gear/gear[0]/compression-norm</property>
+        <factor>0.09</factor>
+        <axis>
+            <z>1</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>wheelR</object-name>
+        <property>gear/gear[1]/compression-norm</property>
+        <factor>0.05</factor>
+        <axis>
+            <z>1</z>
+        </axis>
+    </animation>
+  
+  <animation>
+    <type>spin</type>
+        <object-name>wheelM</object-name>
+    <property>sim/multiplay/generic/float[5]</property>
+    <factor> -30 </factor>
+    <center>
+      <x-m> -0.63991 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  0.16591 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>wheelR</object-name>
+    <property>sim/multiplay/generic/float[6]</property>
+    <factor> -45 </factor>
+    <center>
+      <x-m> 5.4705 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  0.55482 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+    
+    <!--CANOPY-->
+    
+    <animation>
+    <object-name>Group5.001</object-name>
+    <object-name>Group15.001</object-name>
+</animation>
+
+<animation>
+<type>noshadow</type>
+    <object-name>Group5.001</object-name>
+    <object-name>Group15.001</object-name>
+</animation>
+
+<effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>Group5.001</object-name>
+    <object-name>Group15.001</object-name>
+  </effect>
+  
+  <animation>
+    <object-name>Group5.001</object-name>
+    <object-name>Group15.001</object-name>
+</animation>
+    
+    <!--Parachutes -->
+ 
+<model>
+    <path>Aircraft/Perlan2/Models/Parachutes/Helping-Parachute.xml</path>
+      <condition>
+			 <greater-than>
+				<property>sim/multiplay/generic/float[4]</property>
+				<value>0.01</value>
+			 </greater-than>
+      </condition>
+</model>
+    
+</PropertyList>

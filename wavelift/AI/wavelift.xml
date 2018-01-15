@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+  <description>
+    Generated wavelift scenario for Perlan2 Project by Herbert Wagner 09/2016
+  </description>
+
+<!-- ########################################## -->
+<!-- THERMALS                                   
+      position/latitude-deg  -50.3397 -50.3851 -50.4459 -50.2217
+      position/longitude-deg -72.7169 -72.8020 -72.7073 -72.8704
+-->
+<!-- ########################################## -->
+    <entry>
+      <!--1-->
+      <type>thermal</type>
+      
+      <latitude>-50.3397</latitude>
+      <longitude>-72.7169</longitude>
+      <strength-fps>0.0</strength-fps>
+      <diameter-ft>0.0</diameter-ft>
+      <height-msl>16000.0</height-msl>
+      <model>Models/Geometry/wavelift.xml</model>
+    </entry>
+    
+    <entry>
+      <!--2-->
+      <type>thermal</type>
+      
+      <latitude>-50.3851</latitude>
+      <longitude>-72.8020</longitude>
+      <strength-fps>0.0</strength-fps>
+      <diameter-ft>0.0</diameter-ft>
+      <height-msl>26000.0</height-msl>
+      <model>Models/Geometry/wavelift.xml</model>
+    </entry>
+    
+    <entry>
+      <!--3-->
+      <type>thermal</type>
+      
+      <latitude>-50.4459</latitude>
+      <longitude>-72.7073</longitude>
+      <strength-fps>0.0</strength-fps>
+      <diameter-ft>0.0</diameter-ft>
+      <height-msl>36000.0</height-msl>
+      <model>Models/Geometry/wavelift.xml</model>
+    </entry>
+    
+    <entry>
+      <!--4-->
+      <type>thermal</type>
+      
+      <latitude>-50.2217</latitude>
+      <longitude>-72.8704</longitude>
+      <strength-fps>0.0</strength-fps>
+      <diameter-ft>0.0</diameter-ft>
+      <height-msl>46000.0</height-msl>
+      <model>Models/Geometry/wavelift.xml</model>
+    </entry>
+    
+ </scenario>
+</PropertyList>

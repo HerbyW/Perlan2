@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<!--
+See AUTHORS.txt for credits
+-->
+<PropertyList>
+  
+  <controls>       
+    <breakage>
+      <enabled type="bool">0</enabled><!--Rope Breakage by default disabled-->
+      <altitude-m type="double">50</altitude-m>
+    </breakage>
+    <electric>
+      <battery-switch type="bool">0</battery-switch>
+      <battery-switch-pos type="double">0</battery-switch-pos>
+    </electric>
+    <flight>
+      <rudder2 type="double">0</rudder2>
+    </flight>
+    <gear>
+      <assist-1 type="bool">false</assist-1>
+    </gear>
+    <winch>
+      <place type="bool">false</place>
+    </winch>
+    <aerotow>
+      <find-aircraft type="bool">false</find-aircraft>
+    </aerotow>
+    <smoke type="bool">false</smoke>    
+    <switches>      
+      <gauge-light type="int">0</gauge-light>      
+    </switches>
+    <parachutes>
+      <signal type="int">0</signal>
+    </parachutes>
+    <parachute type="int">0</parachute>
+  </controls>
+  
+  <scenery><share-events type="bool">true</share-events></scenery>
+  
+  <sim>
+    <description>Perlan2 Glider</description>
+    <author>Herbert Wagner, Carlos Reynoso</author>
+    <long-description>
+      See perlanproject.org for more informations on the real aircraft.   
+    </long-description>
+    <status>production</status>
+    <rating>
+      <FDM type="int">4</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">5</cockpit>
+      <model type="int">5</model>
+    </rating>
+    
+    <systems> 
+      <property-rule n="100">
+	<name>Stall</name>
+	<path>Systems/stall.xml</path>
+      </property-rule>
+      
+      
+      <autopilot>
+	<name>Autopilot</name>
+	<path>Systems/Perlan2-autopilot.xml</path>
+      </autopilot>
+    </systems>
+    
+    <aircraft-version>1.2</aircraft-version>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">Perlan2</aero>
+    <startup>
+      <splash-texture>Aircraft/Perlan2/Perlan2-splash.png</splash-texture>
+    </startup>
+    <model>
+      <path archive="y">Aircraft/Perlan2/Models/Perlan2.xml</path>
+      
+      <instruments-light type="int">0</instruments-light><!--Disable fake instrument lights by default-->
+      <shadow type="bool">0</shadow>
+    </model>
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+	<int   n="0"  type="int">  0 </int>                                         <!--  0 immat -->
+	<int   n="1"  type="int">  0 </int>                                         <!--  1 immat -->
+	<int   n="2"  type="int">  0 </int>                                         <!--  2 immat -->
+	<int   n="3"  type="int">  0 </int>                                         <!--  3 immat -->
+	<int   n="4"  type="int">  0 </int>                                         <!--  4 immat -->
+	<int   n="5"  type="int">  0 </int>                                         <!--  5 immat -->
+	<int   n="6"  type="int"  alias="/sim/model/livery/show-immat"/>            <!--  6 Show immat -->
+	<int   n="7"  type="int"  alias="/controls/smoke"/>                         <!--  7 Smoke -->
+	<int   n="8"  type="int"  alias="/gear/gear[0]/wow/"/>
+	<int   n="9"  type="int"  alias="/gear/gear[1]/wow/"/>
+	<int  n="10"  type="int"  alias="/controls/parachute"/>
+	<float n="4"  alias="/sim/model/door-positions/parachutes/position-norm"/>
+	<float n="5"  alias="/gear/gear[0]/rollspeed-ms"/>
+	<float n="6"  alias="/gear/gear[1]/rollspeed-ms"/>
+	<float n="7"  alias="/controls/gear/assist"/>
+	<float n="8"  alias="/surface-positions/speedbrake-pos-norm"/>
+	<float n="9"  alias="/accelerations/pilot-g[0]"/>
+	<float n="10" alias="/instrumentation/airspeed-indicator/true-speed-kt"/>
+	<float n="13" alias="/orientation/alpha-deg"/> 
+	</generic>
+      </multiplay>
+      
+      
+      <!-- Speedbreake step settings -->
+      <spoilers>
+	<setting>0.00</setting>
+	<setting>0.1</setting>
+	<setting>0.2</setting>
+	<setting>0.3</setting>
+	<setting>0.4</setting>
+	<setting>0.5</setting>
+	<setting>0.6</setting>
+	<setting>0.7</setting>
+	<setting>0.8</setting>
+	<setting>0.9</setting>
+	<setting>1.00</setting>
+      </spoilers>
+      
+      <sound>
+	<path>Aircraft/Perlan2/Sounds/Perlan2-sound.xml</path>
+      </sound>
+      
+      <weight n="0">
+	<name type="string">Pilot</name>
+	<weight-lb>140</weight-lb>
+	<max-lb>230</max-lb>
+	<min-lb>100</min-lb>
+      </weight>
+      <weight n="1">
+	<name type="string">Passenger/Instructor</name>
+	<weight-lb>140</weight-lb>
+	<max-lb>230</max-lb>
+	<min-lb>100</min-lb>
+      </weight>
+      <weight n="2">
+	<name type="string">Tail Ballast</name>
+	<weight-lb>1</weight-lb>
+	<max-lb>200</max-lb>
+	<min-lb>0</min-lb>
+      </weight>
+      <weight n="3">
+	<name type="string">Oxigene-Tank</name>
+	<weight-lb>60</weight-lb>
+	<max-lb>200</max-lb>
+	<min-lb>0</min-lb>
+      </weight>
+      
+      <help include="Perlan2-help.xml"/>
+      
+      <!-- hide the 2D panel -->
+      <panel>
+	<visibility archive="y">false</visibility>
+      </panel>
+      
+      <!-- Views -->
+      <view n="0">
+	<name>Pilot View</name>
+	<type>lookfrom</type>
+	<internal type="bool">true</internal>
+	<config>
+	  <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+	  <x-offset-m type="double">0.0</x-offset-m>
+	  <y-offset-m type="double">0.93</y-offset-m>
+	  <z-offset-m type="double">-2.06</z-offset-m>
+	  <pitch-offset-deg>-8</pitch-offset-deg>
+	  <default-field-of-view-deg type="double">73.0</default-field-of-view-deg>
+	  <limits>
+	    <enabled type="bool">true</enabled>
+	    <left>
+	      <heading-max-deg type="double">170</heading-max-deg>
+	      <x-offset-max-m type="double">0.20</x-offset-max-m>
+	      <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+	    </left>
+	    <right>
+	      <heading-max-deg type="double">170</heading-max-deg>
+	      <x-offset-max-m type="double">0.20</x-offset-max-m>
+	      <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+	    </right>
+	  </limits>
+	</config>
+      </view>
+      <view n="100">
+	<name>Left Below-Wing-Camera View</name>
+	<type>lookfrom</type>
+	<internal type="bool">true</internal>
+	<config>
+	  <from-model type="bool">true</from-model>
+	  <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+	  <heading-offset-deg type="double">300</heading-offset-deg>
+	  <x-offset-m archive="y" type="double">-12.62</x-offset-m>
+	  <y-offset-m archive="y" type="double">0.7</y-offset-m>
+	  <z-offset-m archive="y" type="double">0.14</z-offset-m>
+	  <default-heading-offset-deg>300</default-heading-offset-deg>
+	  <pitch-offset-deg>-17.1</pitch-offset-deg>
+	  <default-field-of-view-deg type="double">120.0</default-field-of-view-deg>
+	</config>
+      </view>
+      <view n="101">
+	<name>Right Wingtip Camera View</name>
+	<type>lookfrom</type>
+	<internal type="bool">true</internal>
+	<config>
+	  <from-model type="bool">true</from-model>
+	  <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+	  <heading-offset-deg type="double">90</heading-offset-deg>
+	  <x-offset-m archive="y" type="double">12.62</x-offset-m>
+	  <y-offset-m archive="y" type="double">1.5</y-offset-m>
+	  <z-offset-m archive="y" type="double">0.14</z-offset-m>
+	  <default-heading-offset-deg>90</default-heading-offset-deg>
+	  <pitch-offset-deg>00</pitch-offset-deg>
+	  <default-field-of-view-deg type="double">120.0</default-field-of-view-deg>
+	</config>
+      </view>
+      <view n="102">
+	<name>Tail Camera View</name>
+	<type>lookfrom</type>
+	<internal type="bool">true</internal>
+	<config>
+	  <from-model type="bool">true</from-model>
+	  <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+	  <heading-offset-deg type="double">0</heading-offset-deg>
+	  <x-offset-m archive="y" type="double">0.0</x-offset-m>
+	  <y-offset-m archive="y" type="double">2.65</y-offset-m>
+	  <z-offset-m archive="y" type="double">6.03</z-offset-m>
+	  <default-heading-offset-deg>0</default-heading-offset-deg>
+	  <pitch-offset-deg>-10</pitch-offset-deg>
+	  <default-field-of-view-deg type="double">81.0</default-field-of-view-deg>
+	</config>
+      </view>
+      <view n="103">
+	<name>Copilot/Instructor View</name>
+	<type>lookfrom</type>
+	<internal type="bool">true</internal>
+	<config>
+	  <from-model type="bool">true</from-model>
+	  <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+	  <heading-offset-deg type="double">0</heading-offset-deg>
+	  <x-offset-m archive="y" type="double">0.0</x-offset-m>
+	  <y-offset-m archive="y" type="double">0.96</y-offset-m>
+	  <z-offset-m archive="y" type="double">-0.72</z-offset-m>
+	  <default-heading-offset-deg>0</default-heading-offset-deg>
+	  <pitch-offset-deg>-10</pitch-offset-deg>
+	  <default-field-of-view-deg type="double">89</default-field-of-view-deg>
+	  <limits>
+	    <enabled type="bool">false</enabled>
+	    <left>
+	      <heading-max-deg type="double">120</heading-max-deg>
+	      <x-offset-max-m type="double">0.28</x-offset-max-m>
+	      <x-offset-threshold-deg type="double">0</x-offset-threshold-deg>
+	    </left>
+	    <right>
+	      <heading-max-deg type="double">170</heading-max-deg>
+	      <x-offset-max-m type="double">0.25</x-offset-max-m>
+	      <x-offset-threshold-deg type="double">0</x-offset-threshold-deg>
+	    </right>
+	  </limits>
+	</config>
+      </view>
+      <view n="104">
+	<name>Pilot View left</name>
+	<type>lookfrom</type>
+	<internal type="bool">true</internal>
+	<config>
+	  <from-model type="bool">true</from-model>
+	  <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+	  <heading-offset-deg type="double">0</heading-offset-deg>
+	  <x-offset-m archive="y" type="double">-0.16</x-offset-m>
+	  <y-offset-m archive="y" type="double">0.95</y-offset-m>
+	  <z-offset-m archive="y" type="double">-2.31</z-offset-m>
+	  <default-heading-offset-deg>10</default-heading-offset-deg>
+	  <pitch-offset-deg>-10</pitch-offset-deg>
+	  <default-field-of-view-deg type="double">52</default-field-of-view-deg>
+	</config>
+      </view>
+      <view n="105">
+	<name>Pilot View right</name>
+	<type>lookfrom</type>
+	<internal type="bool">true</internal>
+	<config>
+	  <from-model type="bool">true</from-model>
+	  <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+	  <heading-offset-deg type="double">0</heading-offset-deg>
+	  <x-offset-m archive="y" type="double">0.16</x-offset-m>
+	  <y-offset-m archive="y" type="double">0.95</y-offset-m>
+	  <z-offset-m archive="y" type="double">-2.31</z-offset-m>
+	  <default-heading-offset-deg>-10</default-heading-offset-deg>
+	  <pitch-offset-deg>-10</pitch-offset-deg>
+	  <default-field-of-view-deg type="double">52</default-field-of-view-deg>
+	</config>
+      </view>
+      <!--Set the view center to be between the wing roots-->
+      <view n="1">
+	<config>
+	  <target-y-offset-m archive="y" type="double">0.76533</target-y-offset-m>
+	  <target-z-offset-m archive="y" type="double">-1.0496</target-z-offset-m>
+	</config>
+      </view>
+      <view n="2">
+	<config>
+	  <target-y-offset-m archive="y" type="double">0.76533</target-y-offset-m>
+	  <target-z-offset-m archive="y" type="double">-1.0496</target-z-offset-m>
+	</config>
+      </view>
+      <view n="3">
+	<config>
+	  <target-y-offset-m archive="y" type="double">0.76533</target-y-offset-m>
+	  <target-z-offset-m archive="y" type="double">-1.0496</target-z-offset-m>
+	</config>
+      </view>
+      <view n="4">
+	<config>
+	  <target-y-offset-m archive="y" type="double">0.76533</target-y-offset-m>
+	  <target-z-offset-m archive="y" type="double">-1.0496</target-z-offset-m>
+	</config>
+      </view>
+      
+      <menubar>
+	<default>
+	  <menu n="10">
+	    <label>Perlan2</label>
+	    <enabled type="bool">true</enabled>
+	    <item>
+	      <label>Aerotow Settings</label>
+	      <binding>
+		<command>dialog-show</command>
+		<dialog-name>aerotow_dialog</dialog-name>
+	      </binding>
+	    </item>
+	    <item>
+	      <label>Winch Settings</label>
+	      <binding>
+		<command>dialog-show</command>
+		<dialog-name>winch_dialog</dialog-name>
+	      </binding>
+	    </item>
+	    <item>
+	      <label>Rope Breakage</label>
+	      <binding>
+		<command>dialog-show</command>
+		<dialog-name>breakage</dialog-name>
+	      </binding>
+	    </item>
+	    <item>
+	      <label>Ground services</label>
+	      <binding>
+		<command>dialog-show</command>
+		<dialog-name>groundservice_dialog</dialog-name>
+	      </binding>
+	    </item>
+	    <item>
+	      <label>Select Immatriculation</label>
+	      <binding>
+		<command>dialog-show</command>
+		<dialog-name>Immatriculation</dialog-name>
+	      </binding>
+	    </item>
+	  </menu>
+	</default>
+      </menubar>
+      
+      <hitches>
+	<!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
+	<!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset
+	should fix this somehow-->
+	<hook-open type="bool">false</hook-open>
+	<aerotow>
+	  <tow>
+	    <length type="float">80</length>
+	    <elastic-constant type="float">35000</elastic-constant>
+	    <weight-per-m-kg-m type="float">0.35</weight-per-m-kg-m>
+	    <dist type="float">1</dist>
+	    <connected-to-property-node type="bool"/>
+	    <brake-force type="float">120000</brake-force>
+	    <connected-to-ai-or-mp-callsign type="string">*</connected-to-ai-or-mp-callsign>
+	    <end-force-x type="float">-3.50</end-force-x>
+	    <end-force-y type="float">0</end-force-y>
+	    <end-force-z type="float">0</end-force-z>
+	  </tow>
+	  <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+	  <open type="bool">true</open>
+	  <is-slave type="bool">false</is-slave>
+	</aerotow>
+	<winch>
+	  <automatic-release-angle-deg type="float">90.0</automatic-release-angle-deg>
+	</winch>
+      </hitches>
+      
+    </sim>
+    
+    <limits>
+      <max-spoiler-extension-speed>151.2</max-spoiler-extension-speed>      
+      <vne>151.2</vne>      
+      <vmo>97.2</vmo>      
+      <max-positive-g-vmo>6.5</max-positive-g-vmo>
+      <max-negative-g-vmo>-4.0</max-negative-g-vmo>      
+      <max-positive-g-vne>5.3</max-positive-g-vne>
+      <max-negative-g-vne>-3.0</max-negative-g-vne>      
+      <mtow-lbs>1322.77</mtow-lbs>      
+      </limits>
+      
+      <instrumentation>
+	<comm>
+	  <serviceable-int type="int">0</serviceable-int>
+	</comm>
+	<comm-radio>
+	  <name>comm</name>
+	  <number>0</number>
+	</comm-radio>
+	
+	<alerts><stall type="bool">false</stall></alerts>
+	
+	</instrumentation>
+	
+	<input>
+	  <keyboard>
+	    <key n="127">
+	      <name>Delete</name>
+	      <desc>Toggle Reversers</desc>
+	      <binding>
+		<condition>
+		  <equals>
+		    <property>controls/engines/engine[0]/throttle</property>
+		    <value>0</value>
+		  </equals>
+		</condition>
+		<command>property-toggle</command>
+		<property>controls/engines/engine[0]/reverser</property>
+	      </binding>
+	    </key>
+	    
+	    <key n="23">
+	      <name>Ctrl-w</name>
+	      <desc>Place winch in front of aircraft</desc>
+	      <binding>
+		<command>nasal</command>
+		<script>towing.setWinchPositionAuto()</script>
+	      </binding>
+	    </key>
+	    
+	    <key n="87">
+	      <name>W</name>
+	      <desc>Increase winch speed</desc>
+	      <binding>
+		<command>nasal</command>
+		<script>
+		  throttle = getprop("/sim/hitches/winch/winch/rel-speed") + 0.05;
+		  if (throttle > 1) throttle = 1;
+	      setprop("/sim/hitches/winch/winch/rel-speed", throttle);
+	      speed = throttle * getprop("/sim/hitches/winch/winch/max-speed-m-s");
+	      force = getprop("/sim/hitches/winch/force");
+	      gui.popupTip(sprintf("Winch throttle %d%%, speed %0.2f m/s, force %0.2f", throttle * 100, speed, force));
+	    </script>
+	  </binding>
+	</key>
+	
+	<key n="119">
+	  <name>w</name>
+	  <desc>Decrease winch speed</desc>
+	  <binding>
+	    <command>nasal</command>
+	    <script>
+	      throttle = getprop("/sim/hitches/winch/winch/rel-speed") - 0.05;
+	      if (0 > throttle) throttle = 0;
+	      setprop("/sim/hitches/winch/winch/rel-speed", throttle);
+	      speed = throttle * getprop("/sim/hitches/winch/winch/max-speed-m-s");
+	      force = getprop("/sim/hitches/winch/force");
+	      gui.popupTip(sprintf("Winch throttle %d%%, speed %0.2f m/s, force %0.2f", throttle * 100, speed, force));
+	    </script>
+	  </binding>
+	</key>
+	
+	<key n="15">
+	  <name>Ctrl-o</name>
+	  <desc>Find aircraft for aerotow</desc>
+	  <binding>
+	    <command>property-assign</command>
+	    <property>/controls/aerotow/find-aircraft</property>
+	    <value type="bool">true</value>
+	  </binding>
+	  <mod-up>
+	    <binding>
+	      <command>property-assign</command>
+	      <property>/controls/aerotow/find-aircraft</property>
+	      <value type="bool">false</value>
+	    </binding>
+	  </mod-up>
+	</key>
+	
+	<key n="111">
+	  <name>o</name>
+	  <desc>Open hook</desc>
+	  <binding>
+	    <command>property-assign</command>
+	    <property>/sim/hitches/hook-open</property>
+	    <value type="bool">true</value>
+	  </binding>
+	  <binding>
+	    <command>property-assign</command>
+	    <property>/sim/hitches/aerotow/open</property>
+	    <value type="bool">true</value>
+	  </binding>
+	  <binding>
+	    <command>property-assign</command>
+	    <property>/sim/hitches/winch/open</property>
+	    <value type="bool">true</value>
+	  </binding>
+	  <mod-up>
+	    <binding>
+	      <command>property-assign</command>
+	      <property>/sim/hitches/hook-open</property>
+	      <value type="bool">false</value>
+	    </binding>
+	  </mod-up>
+	  
+	  </key>
+	  
+	  <key n="19">
+	    <name>Ctrl-s</name>
+	    <desc>Start/stop smoke</desc>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>controls/smoke</property>
+	    </binding>
+	  </key>
+	  
+	  <key n="258">
+	    <name>F2</name>
+	    <desc>Paracchutes Deploying</desc>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>controls/parachutes/signal</property>
+	    </binding>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>sim/multiplay/generic/int[10]</property>
+	    </binding>
+	  </key>
+	  
+	  <key n="60">
+	    <name> > </name>
+	  <desc>Change Pilot left-right View</desc>
+	  <binding>
+	    <command>property-cycle</command>
+	    <property>/sim/current-view/view-number</property>  
+	    <value>0</value>
+	    <value>12</value>
+	    <value>13</value>
+	  </binding>
+	</key>
+	  
+	  </keyboard>
+	
+	</input>
+	
+	<nasal>
+	  
+	  <doors>
+	    <file>Aircraft/Perlan2/Nasal/doors.nas</file>
+	    </doors>
+	  <Perlan2>    
+	    <file>Aircraft/Perlan2/Nasal/wool-thread.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/AR3201.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/GMeter.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/groundhandling.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/wingbending.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/rain.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/immat.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/listeners.nas</file>
+	    <file>Aircraft/Perlan2/Nasal/perlan.nas</file>
+	    <warning>
+	      <file>Aircraft/Perlan2/Nasal/Perlan2-stall.nas</file>
+	    </warning>    
+	  </Perlan2>
+	</nasal>
+      </PropertyList>
+      
