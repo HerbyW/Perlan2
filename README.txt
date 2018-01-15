@@ -28,3 +28,5 @@ LICENSE: This aircraft is released under the GNU GPL v2 License, see COPYING fil
 Installation: Unzip and copy into the aircraft folder. (remane the folder to "Perlan2")
 
 See aircraft help for detailed instructions.
+
+My steemit.com username is schamangerbert.
